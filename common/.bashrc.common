@@ -1,0 +1,11 @@
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias la='exa -la'
+alias tree='tree -C'
+alias neofetch='fastfetch'
+alias update='sudo pacman -Syu'
+alias uninstall='sudo pacman -Rcns'
+alias activate='source .venv/bin/activate'
+alias gitlog='git log --graph --oneline --all'
+
+export EDITOR="nvim"
