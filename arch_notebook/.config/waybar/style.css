@@ -1,0 +1,101 @@
+/* ===== Global ===== */
+*,
+* > * {
+    border: none;
+    border-radius: 0;
+    font-family: "Symbols Nerd Font", monospace;
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(20, 20, 20, 0.85);
+    color: #e5e5e5;
+}
+
+/* ===== Workspaces ===== */
+#workspaces {
+    padding-left: 8px;
+}
+
+#workspaces button {
+    padding: 4px 8px;
+    margin: 4px 2px;
+    background: transparent;
+    color: #888;
+    border-radius: 6px;
+}
+
+#workspaces button.active {
+    background: #5e81ac;
+    color: #ffffff;
+}
+
+#workspaces button:hover {
+    background: #3b4252;
+    color: #ffffff;
+}
+
+/* ===== Center Clock ===== */
+#clock {
+    background: #2e3440;
+    padding: 6px 14px;
+    margin: 4px 0;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* ===== Right Modules ===== */
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#custom-power,
+#custom-battery,
+#language {
+    background: #2e3440;
+    padding: 6px 10px;
+    margin: 4px 2px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* Hover effect */
+#cpu:hover,
+#memory:hover,
+#network:hover,
+#pulseaudio:hover,
+#custom-power:hover,
+#custom-battery:hover,
+#language:hover {
+    background: #3b4252;
+}
+
+/* States */
+#network.disconnected {
+    color: #bf616a;
+}
+
+#pulseaudio.muted {
+    color: #bf616a;
+}
+
+/* Icon spacing */
+#cpu span,
+#memory span,
+#network span,
+#pulseaudio span,
+#custom-power span,
+#language span {
+    margin-right: 4px;
+}
+
+/* Tooltips */
+.tooltip {
+    background: rgba(46, 52, 64, 0.9);
+    color: #e5e5e5;
+    border-radius: 6px;
+    padding: 3px 6px;
+    font-size: 12px;
+}
+
