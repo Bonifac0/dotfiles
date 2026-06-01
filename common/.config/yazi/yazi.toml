@@ -1,0 +1,11 @@
+# ~/.config/yazi/yazi.toml
+
+[opener]
+pdf = [
+    { run = 'firefox "$@"', orphan = true }
+]
+
+[open]
+rules = [
+    { mime = "application/pdf", use = "pdf" },
+]
