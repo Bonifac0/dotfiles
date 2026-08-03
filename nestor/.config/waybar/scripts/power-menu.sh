@@ -1,18 +1,19 @@
 #!/bin/bash
 
-op=$(echo -e "  Shutdown\n󰑐  Reboot\n  Suspend\n󰍃  Logout" | wofi -i --dmenu --width 200 --height 285 --cache-file /dev/null)
+op=$(printf " Shutdown\n󰑐 Reboot\n Suspend\n󰍃 Logout\n" \
+    | fuzzel --dmenu --prompt="Power > ")
 
 case $op in
-    "  Shutdown")
+    " Shutdown")
         systemctl poweroff
         ;;
-    "󰑐  Reboot")
+    "󰑐 Reboot")
         systemctl reboot
         ;;
-    "  Suspend")
+    " Suspend")
         systemctl suspend
         ;;
-    "󰍃  Logout")
-        hyprctl dispatch exit
+    "󰍃 Logout")
+        hyprctl dispatch 'hl.dsp.exit()'
         ;;
 esac
