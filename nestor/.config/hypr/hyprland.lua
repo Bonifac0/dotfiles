@@ -1,10 +1,8 @@
 -- Main entry point
 
-require("monitors")
 require("autostart")
-require("environment")
+require("common")
 require("appearance")
 require("animations")
-require("input")
 require("keybinds")
 require("rules")
