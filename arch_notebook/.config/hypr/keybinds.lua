@@ -23,7 +23,7 @@ hl.bind(
 )
 hl.bind(mainMod .. ' + E', hl.dsp.window.fullscreen())
 hl.bind(mainMod .. ' + Space', hl.dsp.exec_cmd(menu))
-hl.bind(mainMod .. ' + P', hl.dsp.window.pseudo())
+hl.bind(mainMod .. ' + P', hl.dsp.exec_cmd '~/.config/waybar/scripts/power-menu.sh')
 hl.bind(mainMod .. ' + J', hl.dsp.layout 'togglesplit')
 hl.bind(mainMod .. ' + L', hl.dsp.exec_cmd 'systemctl suspend')
 hl.bind(mainMod .. ' + F', hl.dsp.exec_cmd(browser))

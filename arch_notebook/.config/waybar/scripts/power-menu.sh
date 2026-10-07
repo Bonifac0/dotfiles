@@ -1,6 +1,6 @@
 #!/bin/bash
 
-op=$(echo -e "  Shutdown\n󰑐  Reboot\n  Suspend\n󰍃  Logout" | wofi -i --dmenu --width 200 --height 284 --cache-file /dev/null)
+op=$(echo -e "  Shutdown\n󰑐  Reboot\n  Suspend\n󰍃  Logout" | fuzzel --dmenu --lines 4 --width 18 --prompt "Power: ")
 
 case $op in
     "  Shutdown")
