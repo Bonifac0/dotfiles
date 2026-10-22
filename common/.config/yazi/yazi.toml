@@ -1,11 +1,28 @@
-# ~/.config/yazi/yazi.toml
-
 [opener]
+edit = [
+    { run = 'nvim %s', block = true, desc = "Neovim", for = "unix" },
+]
+
 pdf = [
-    { run = 'firefox "$@"', orphan = true }
+    { run = 'firefox %s', orphan = true, desc = "Firefox", for = "unix" },
 ]
 
 [open]
-rules = [
-    { mime = "application/pdf", use = "pdf" },
+prepend_rules = [
+    { url = "*.pdf", use = "pdf" },
+    { url = "*.txt", use = "edit" },
+    { url = "*.py", use = "edit" },
+    { url = "*.lua", use = "edit" },
+    { url = "*.md", use = "edit" },
+    { url = "*.markdown", use = "edit" },
+    { url = "*.toml", use = "edit" },
+    { url = "*.yaml", use = "edit" },
+    { url = "*.yml", use = "edit" },
+    { url = "*.json", use = "edit" },
+    { url = "*.sh", use = "edit" },
+    { url = "*.conf", use = "edit" },
+    { url = "*.c", use = "edit" },
+    { url = "*.h", use = "edit" },
+    { url = "*.cpp", use = "edit" },
+    { url = "*.rs", use = "edit" },
 ]

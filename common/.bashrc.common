@@ -9,3 +9,14 @@ alias activate='source .venv/bin/activate'
 alias gitlog='git log --graph --oneline --all'
 
 export EDITOR="nvim"
+
+function y() {
+    local tmp cwd
+    tmp="$(mktemp -t yazi-cwd.XXXXXX)" || return
+    command yazi "$@" --cwd-file="$tmp"
+    IFS= read -r -d '' cwd < "$tmp" || true
+    if [ -n "$cwd" ] && [ -d "$cwd" ]; then
+        builtin cd -- "$cwd"
+    fi
+    command rm -f -- "$tmp"
+}
